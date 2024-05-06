@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class ProductDifference{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter number:");
+        int n=sc.nextInt();
+        int sum=0;
+        int product=1;
+        while(n>0){
+            sum=sum+(n%10);
+            product=product*(n%10);
+            n=n/10;
+        }
+        int Difference=product-sum;
+        System.out.println("Difference between product and sum is:" + Difference);
+    }
+}
