@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Pin {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Input1:");
+        int input1=sc.nextInt();
+        System.out.println("Enter Input2:");
+        int input2=sc.nextInt();
+        System.out.println("Enter Input3:");
+        int input3=sc.nextInt();
+        System.out.println("Enter Input4:");
+        int input4=sc.nextInt();
+        int pin= findpin(input1,input2,input3,input4);
+        System.out.println("Pin is:"+pin);
+         
+
+    }
+    static int findpin(int input1,int input2,int input3,int input4)
+    {
+      int pin=largest(input1)*largest(input2)*largest(input3)+input4;
+      return pin;
+    }
+    static int largest(int number)
+    {
+        int maxdigit=0;
+        while(number>0)
+        {
+            int digit=number%10;
+            if(digit>maxdigit)
+            {
+                maxdigit=digit;
+            }
+            number/=10;
+        }
+        return maxdigit;
+    }
+
+}
