@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class PinTwo {
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Input1:");
+        int input1=sc.nextInt();
+        System.out.println("Enter Input2:");
+        int input2=sc.nextInt();
+        System.out.println("Enter Input3:");
+        int input3=sc.nextInt();
+        System.out.println("Enter Input4:");
+        int input4=sc.nextInt();
+        int pin=findpin(input1, input2, input3, input4);
+        System.out.println("Pin is:"+pin);
+    }
+    static int findpin(int input1,int input2,int input3,int input4)
+    {   
+        int sumEven=getSumofEvenPositionDigits(input1)+getSumofEvenPositionDigits(input2)+getSumofEvenPositionDigits(input3);
+        int sumOdd=getSumofOddPositionDigits(input1)+getSumofOddPositionDigits(input2)+getSumofOddPositionDigits(input3);
+        int pin;
+        if(input4 %2 == 0)
+        {
+             pin=sumEven-sumOdd;
+        }
+        else
+        {
+             pin=sumOdd-sumEven;
+        }
+        return pin;
+    
+    }
+    static int getSumofEvenPositionDigits(int number)
+    {
+        String numstr=Integer.toString(number);
+        int sum=0;
+        for(int i=0;i<numstr.length();i+=2)
+        {
+            int digit=Character.getNumericValue(numstr.charAt(i));
+            sum+=digit;
+        }
+        return sum;
+
+    }
+    static int getSumofOddPositionDigits(int number)
+    {
+        String numstr=Integer.toString(number);
+        int sum=0;
+        for(int i=1;i<numstr.length();i+=2)
+        {
+            int digit=Character.getNumericValue(numstr.charAt(i));
+            sum+=digit;
+        }
+        return sum;
+
+    }
+
+}
