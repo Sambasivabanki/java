@@ -16,3 +16,25 @@ class fibnocci{
             
     }
 }
+//new version
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the Number of Terms in Fibnocci series: ");
+        int number=sc.nextInt();
+        int firstnumber=0;
+        int secondnumber=1;
+        System.out.print("Fibnocci series is:");
+        for(int i=1;i<=number;i++)
+        {
+            int nextnumber=firstnumber+secondnumber;
+            System.out.print(nextnumber+" ");
+            firstnumber=secondnumber;
+            secondnumber=nextnumber;
+        }
+        
+    }
+}
