@@ -1,0 +1,89 @@
+import java.util.*;
+class Main
+{
+    public static void main(String[] args)
+    {
+        //ArrayList Example
+        List<String> names=new ArrayList<>();
+        names.add("one");
+        names.add("Two");
+        names.add("Three");
+        names.add("Three");
+        System.out.println("ArrayList is:"+names);
+        
+        //LinkedList Example
+        List<String> ll=new LinkedList<>();
+        ll.add("Five");
+        ll.add("Six");
+        ll.add("Seven");
+        ll.add("Seven");
+        System.out.println("LinkedList is:"+names);
+        
+        //HashSet Example
+        HashSet<String>hs=new HashSet<>();
+        hs.add("India");
+        hs.add("USA");
+        hs.add("Canada");
+        hs.add("Berlin");
+        hs.add("India");
+        hs.add("china");
+        System.out.println("HashSet is:"+hs);
+        
+        //LinkedHashSet Example
+        LinkedHashSet<String> lhs=new LinkedHashSet<>();
+        lhs.add("Pogiri");
+        lhs.add("Rajam");
+        lhs.add("Sigadam");
+        lhs.add("Pondur");
+        lhs.add("Pogiri");
+        lhs.add("Srikakulam");
+        System.out.println("LinkedHashSet is:"+lhs);
+        
+        //TreeSet Example
+        TreeSet<String> ts=new TreeSet<>();
+        ts.add("ram");
+        ts.add("shyam");
+        ts.add("gyan");
+        ts.add("siva");
+        ts.add("arun");
+        ts.add("aive");
+        System.out.println("TresSet is:"+ts);
+        
+        //HashMap Example
+        Map<String,Integer> hm=new HashMap<>();
+        hm.put("siva",21);
+        hm.put("samba",20);
+        hm.put("arun",5);
+        hm.put("abhi",7);
+        hm.put("siva",21);
+        System.out.println("HashMap is:"+hm);
+        
+        //LinkedHashMap Example
+        LinkedHashMap<String,Integer> lhm=new LinkedHashMap<>();
+        lhm.put("siva",21);
+        lhm.put("samba",20);
+        lhm.put("arun",5);
+        lhm.put("abhi",7);
+        lhm.put("siva",22);
+        System.out.println("LinkedHashMap is:"+lhm);
+        
+        //TreeMap Example
+        TreeMap<String,Integer> tm=new TreeMap<>();
+         tm.put("siva",21);
+        tm.put("samba",20);
+        tm.put("arun",5);
+        tm.put("abhi",7);
+        tm.put("siva",21);
+        System.out.println("TreeMap is:"+tm);
+    }
+}
+
+Output:
+ArrayList is:[one, Two, Three, Three]
+LinkedList is:[one, Two, Three, Three]
+HashSet is:[Canada, USA, china, Berlin, India]
+LinkedHashSet is:[Pogiri, Rajam, Sigadam, Pondur, Srikakulam]
+TresSet is:[aive, arun, gyan, ram, shyam, siva]
+HashMap is:{siva=21, arun=5, samba=20, abhi=7}
+LinkedHashMap is:{siva=22, samba=20, arun=5, abhi=7}
+TreeMap is:{abhi=7, arun=5, samba=20, siva=21}
