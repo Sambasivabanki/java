@@ -1,0 +1,17 @@
+class Main
+{
+    public static void main(String[] args)
+    {
+        int x=4;
+        int y=3;
+        int k=1;
+        for(int i=1;i<=y;i++)
+        {
+            k=k*x;
+        }
+        System.out.print(k);
+    }
+}
+
+Output:
+64
