@@ -1,0 +1,24 @@
+class Main
+{
+    public static void main(String[] args)
+    {
+        int n=hcfByFactors(48,18);
+        System.out.println("Hcf of these numbers is:"+n);
+    }
+    static int hcfByFactors(int a,int b)
+    {
+        int hcf=1;
+        int min=Math.min(a,b);
+        for(int i=1;i<=min;i++)
+        {
+            if(a%i==0 && b%i==0)
+            {
+                hcf=i;
+            }
+        }
+        return hcf;
+    }
+}
+
+Output:
+Hcf of these numbers is:6
